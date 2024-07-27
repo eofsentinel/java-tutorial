@@ -1,8 +1,10 @@
 package com.tutorial1;
 
 import java.awt.Point;
+import java.text.NumberFormat;
 import java.time.Instant;
 import java.util.Date;
+import java.util.Locale;
 
 public class Main {
     /**
@@ -10,9 +12,9 @@ public class Main {
      */
     public static void main(String[] args) {
         System.out.println("Hello world!!");
-        
+
         int age = 30;
-        byte herAge = (byte)(age - 3);
+        byte herAge = (byte) (age - 3);
         System.out.println("MyAge: " + age + "\nHerAge: " + herAge);
 
         long viewsCount = 3_123_456_789L;
@@ -44,5 +46,9 @@ public class Main {
         System.out.println(message);
         System.out.println(message.toUpperCase());
         System.out.println(message.trim());
+
+        NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.CANADA);
+        String currencyResult = currency.format(121212123456.789);
+        System.out.println(currencyResult);
     }
 }
