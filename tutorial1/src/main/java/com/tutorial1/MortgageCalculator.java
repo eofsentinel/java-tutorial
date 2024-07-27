@@ -1,5 +1,7 @@
 package com.tutorial1;
 
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class MortgageCalculator {
@@ -18,8 +20,9 @@ public class MortgageCalculator {
             double roiMonthly = rateOfInterestAnuallyPercent/100.0/12.0;
             double temp = Math.pow(1 + roiMonthly, months);
             double mortgage = principalAmount * roiMonthly * temp / (temp - 1);
+            String mortgageOutput = NumberFormat.getCurrencyInstance(Locale.US).format(mortgage);
 
-            System.out.format("For %d months, you pay $%.2f ", months, mortgage);
+            System.out.println("\nTotal months: " + months + "\nMortgage: " + mortgageOutput);
         }
         catch (Exception ex) {
             System.err.println(ex);
