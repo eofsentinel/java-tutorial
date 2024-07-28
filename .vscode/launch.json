@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FizzBuzz",
+            "request": "launch",
+            "mainClass": "com.tutorial1.FizzBuzz",
+            "projectName": "tutorial1"
+        },
+        {
+            "type": "java",
             "name": "MortgageCalculator",
             "request": "launch",
             "mainClass": "com.tutorial1.MortgageCalculator",
